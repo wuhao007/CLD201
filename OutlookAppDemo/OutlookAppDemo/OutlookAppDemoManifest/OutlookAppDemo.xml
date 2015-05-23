@@ -5,8 +5,8 @@
   <Version>1.0.0.0</Version>
   <ProviderName>[Provider name]</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="OutlookAppDemo" />
-  <Description DefaultValue="OutlookAppDemo"/>
+  <DisplayName DefaultValue="Outlook App Demo" />
+  <Description DefaultValue="This is a sample Outllook app"/>
   <Capabilities>
     <Capability Name="Mailbox" />
   </Capabilities>
@@ -15,8 +15,9 @@
     <RequestedHeight>250</RequestedHeight>
   </DesktopSettings>
   <Permissions>ReadItem</Permissions>
-  <Rule xsi:type="RuleCollection" Mode="Or">
+  <Rule xsi:type="RuleCollection" Mode="And">
     <Rule xsi:type="ItemIs" ItemType="Message"/>
+    <Rule xsi:type="ItemHasKnownEntity" EntityType="MeetingSuggestion" />
   </Rule>
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
 </OfficeApp>
